@@ -1,0 +1,102 @@
+body {
+  background-color: #212529;
+  color: #fff;
+  font-size: 16px;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#photo-me {
+  float: left;
+  height: 280px;
+  padding: 10px;
+  background-color: #6c757d;
+}
+
+#about__infor-me {
+  position: absolute;
+  font-family: monospace;
+  top: 36%;
+  left: 28%;
+  word-break: break-word;
+}
+
+#nationality {
+  font-weight: bold;
+}
+
+#city-state {
+  font-style: italic;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.menu {
+  position: sticky;
+  top: 0;
+  background-color: rgba(34, 38, 42, 0.9);
+  z-index: 100;
+}
+
+.menu ul {
+  width: 90%;
+  margin: auto;
+}
+
+.header-content h1 {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+.header-content__photo {
+  width: 70%;
+  height: 300px;
+  position: relative;
+}
+
+.list-skills {
+  padding-left: 0;
+}
+.list-skills li:nth-child(2n + 1) {
+  color: #663399;
+  text-decoration: underline;
+}
+
+.primeira-soft-skill {
+  font-size: 1.11em;
+}
+.segunda-soft-skill {
+  font-size: 1.2em;
+}
+.terceira-soft-skill {
+  font-size: 1.3em;
+}
+.quarta-soft-skill {
+  font-size: 1.4em;
+}
+
+.primeira-hard-skill {
+  font-size: 1.5em;
+}
+.segunda-hard-skill {
+  font-size: 1.6em;
+}
+.terceira-hard-skill {
+  font-size: 1.7em;
+}
+.quarta-hard-skill {
+  font-size: 1.8em;
+}
+.quinta-hard-skill {
+  font-size: 1.9em;
+}
