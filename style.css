@@ -1,7 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: #212529;
   color: #fff;
   font-size: 16px;
+  font-family: monospace;
 }
 
 ul li {
@@ -14,20 +24,35 @@ a {
 }
 
 #photo-me {
-  float: left;
-  height: 280px;
-  padding: 10px;
-  background-color: #6c757d;
+  height: 140px;
+  border-radius: 50%;
+  margin-top: 150px;
+  padding: 7px;
+  background-color: #434a50;
 }
 
 #about__infor-me {
-  position: absolute;
   font-family: monospace;
   top: 36%;
   left: 28%;
   word-break: break-word;
 }
 
+#about {
+  height: 100vh;
+  padding-top: 90px;
+  max-width: 800px;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+#about span {
+  display: inline-block;
+  margin-bottom: 10px;
+}
 #nationality {
   font-weight: bold;
 }
@@ -36,67 +61,96 @@ a {
   font-style: italic;
 }
 
+#skills {
+  height: 100vh;
+  max-width: 800px;
+  padding-top: 90px;
+}
+
+#skills h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+#skills ul li {
+  margin-bottom: 10px;
+}
+
+#title-soft-skill {
+  font-size: 1.4rem;
+  color: rgb(68, 187, 44);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#title-softskill li {
+  margin-bottom: 7px;
+}
+
+#title-hard-skill {
+  font-size: 1.4rem;
+  color: rgb(68, 187, 44);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#title-hard-skill > li {
+  margin-top: 10px;
+}
+#title-hardskill li {
+  margin-bottom: 7px;
+}
+
 .container {
-  width: 90%;
   margin: 0 auto;
+  padding-top: 40px;
 }
 
 .menu {
-  position: sticky;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(54, 29, 35, 0.9);
+  height: 100vh;
+  width: 10%;
+  position: fixed;
+  left: 0;
   top: 0;
-  background-color: rgba(34, 38, 42, 0.9);
-  z-index: 100;
 }
 
 .menu ul {
-  width: 90%;
-  margin: auto;
+  margin: auto 10px;
+  padding: 20px 10px;
+  font-size: 20px;
 }
 
-.header-content h1 {
+.menu ul li {
+  margin-bottom: 20px;
+}
+
+.about-me {
+  height: 100vh;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header-content {
+  width: 70%;
+  margin: 0 auto;
+}
+.about-me h1 {
   font-family: "Roboto", sans-serif;
   text-align: center;
+  font-size: 3rem;
+  margin: 70px 0 30px 0;
 }
 
-.header-content__photo {
-  width: 70%;
-  height: 300px;
-  position: relative;
+.about-me p {
+  text-align: center;
+  line-height: 32px;
+  font-size: 1.2rem;
 }
 
-.list-skills {
-  padding-left: 0;
-}
-.list-skills li:nth-child(2n + 1) {
-  color: #663399;
-  text-decoration: underline;
-}
-
-.primeira-soft-skill {
-  font-size: 1.11em;
-}
-.segunda-soft-skill {
-  font-size: 1.2em;
-}
-.terceira-soft-skill {
-  font-size: 1.3em;
-}
-.quarta-soft-skill {
-  font-size: 1.4em;
-}
-
-.primeira-hard-skill {
-  font-size: 1.5em;
-}
-.segunda-hard-skill {
-  font-size: 1.6em;
-}
-.terceira-hard-skill {
-  font-size: 1.7em;
-}
-.quarta-hard-skill {
-  font-size: 1.8em;
-}
-.quinta-hard-skill {
-  font-size: 1.9em;
+.about-me p a {
+  color: rgb(68, 187, 44);
 }
