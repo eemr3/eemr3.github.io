@@ -1,0 +1,107 @@
+body {
+  background-color: rgb(253, 251, 251);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  min-height: 100vh;
+}
+
+#cabecalho {
+  background-color: rgb(154, 147, 147);
+  box-sizing: border-box;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#titulo {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+#minha_foto {
+  display: inline-block;
+  width: 100px;
+}
+
+#rodape {
+  background-color: rgb(155, 148, 148);
+  margin-top: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+}
+
+#lessons_learned {
+  margin-top: 210px;
+}
+
+.nav-footer ul li a {
+  text-decoration: none;
+  color: rgb(31, 31, 247);
+  background-color: blanchedalmond;
+  padding: 10px 0;
+  width: 140px;
+  display: inline-block;
+}
+
+#licoes_a_aprender a {
+  color: rgb(31, 31, 247);
+}
+
+#licoes_a_aprender li a {
+  text-decoration: none;
+}
+
+.lessons {
+  margin-top: 40px;
+  padding: 2%;
+}
+
+.list-skills {
+  display: inline-block;
+}
+
+.menu ul {
+  list-style: none;
+  display: inline-block;
+}
+
+.menu ul li {
+  display: inline-block;
+}
+
+.nav-footer ul li {
+  display: inline-block;
+}
+
+.lado-direito {
+  width: 40%;
+  text-align: justify;
+  margin-right: 10px;
+  height: 230px;
+  float: right;
+  top: 400px;
+}
+
+.lado-esquerdo {
+  width: 40%;
+  text-align: justify;
+  display: inline-block;
+  height: 230px;
+  top: 100px;
+}
+
+.article-learned > p {
+  line-height: 25px;
+}
+
+.table_infor {
+  border: 1px solid black;
+  width: 430px;
+  margin-bottom: 20px;
+}

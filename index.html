@@ -7,6 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
@@ -28,6 +34,7 @@
         <ul>
           <li><a href="#about">Sobre</a></li>
           <li><a href="#skills">Habilidades</a></li>
+          <li><a href="#projects">Projetos</a></li>
           <li><a href="#recomendacao">Blogs</a></li>
         </ul>
       </nav>
@@ -46,39 +53,74 @@
             de tecnologia e stou em busca de meu lugar ao sol, nesse mudo da TI.
           </p>
         </div>
-        <div id="about">
+        <section id="about">
           <h2>Sobre</h2>
           <span>Tenho 45 anos</span><br />
           <span id="nationality">Sou brasileiro</span><br />
           <span id="city-state">Moro em Anápolis/GO</span>
-        </div>
-        <div id="skills">
+        </section>
+        <section id="skills">
           <h2>Habilidades</h2>
           <ul class="list-skills">
             <ul id="soft-skills">
               <li id="title-soft-skill">Soft Skills</li>
-              <li class="primeira-soft-skill"><em>Paciênte</em></li>
-              <li class="segunda-soft-skill"><strong>Resiliente</strong></li>
-              <li class="terceria-soft-skill"><strong>Prestativo</strong></li>
-              <li class="quarta-soft-skill"><em>Bom ouvinte</em></li>
+              <li class="soft-skill"><em>Paciênte</em></li>
+              <li class="soft-skill"><strong>Resiliente</strong></li>
+              <li class="soft-skill"><strong>Prestativo</strong></li>
+              <li class="soft-skill"><em>Bom ouvinte</em></li>
             </ul>
             <ul id="hard-skills">
               <li id="title-hard-skill">Hard Skills</li>
-              <li class="primeira-hard-skill"><strong>HTML</strong></li>
-              <li class="segunda-hard-skill"><strong>CSS</strong></li>
-              <li class="terceira-hard-skill">JavaScript</li>
-              <li class="quarta-hard-skill">ReactJs</li>
-              <li class="quinta-hard-skill">Git/GitHub</li>
+              <li class="hard-skill">
+                <strong>HTML <i class="fab fa-html5"></i></strong>
+              </li>
+              <li class="hard-skill">
+                <strong>CSS <i class="fab fa-css3-alt"></i></strong>
+              </li>
+              <li class="hard-skill">
+                <strong>JavaScript <i class="fab fa-js-square"></i></strong>
+              </li>
+              <li class="hard-skill">ReactJs <i class="fab fa-react"></i></li>
+              <li class="hard-skill">
+                <strong>Git/GitHub <i class="fab fa-github"></i></strong>
+              </li>
             </ul>
           </ul>
-        </div>
-
-        <h2 id="recomendacao">Blog que acompanho</h2>
-        <p>
-          <a href="https://www.viniciusdacal.com/" target="_blank"
-            >Blog do Vinicius Dacal</a
-          >
-        </p>
+        </section>
+        <section id="projects">
+          <h2>Projetos realizados</h2>
+          <div class="project-grid">
+            <a href="projetos/lessons-learnerd/index.html">
+              <img
+                src="img/Lessons Learned.png"
+                alt="projeto lessons learned"
+              />
+            </a>
+            <a href="projetos/pixels-art/index.html">
+              <img src="img/pixels-art.png" alt="projeto pixels art" />
+            </a>
+            <a href="projetos/todo-list/index.html">
+              <img src="img/todo-list.png" alt="projeto todo-list" />
+            </a>
+            <a href="projetos/mistery-letter/index.html">
+              <img src="img/mistery-letter.png" alt="projeto mistery letter" />
+            </a>
+            <a href="projetos/color-guess/index.html">
+              <img src="img/color-guess.png" alt="projeto color guess" />
+            </a>
+            <a href="projetos/meme-generator/index.html">
+              <img src="img/meme-generator.png" alt="projeto gerador de meme" />
+            </a>
+          </div>
+        </section>
+        <section id="recomendacao">
+          <h2>Blog que acompanho</h2>
+          <p>
+            <a href="https://www.viniciusdacal.com/" target="_blank"
+              >Blog do Vinicius Dacal</a
+            >
+          </p>
+        </section>
       </section>
     </main>
   </body>

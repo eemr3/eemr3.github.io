@@ -94,11 +94,52 @@ a {
   text-decoration: none;
 }
 
-#title-hard-skill > li {
-  margin-top: 10px;
+#hard-skills > li:nth-child(1) {
+  margin-top: 30px;
 }
+
 #title-hardskill li {
   margin-bottom: 7px;
+}
+
+i {
+  font-size: 1.5rem;
+}
+
+#recomendacao {
+  height: 100vh;
+  padding-top: 90px;
+  max-width: 800px;
+}
+
+#recomendacao h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+#projects {
+  height: 100vh;
+  padding: 60px 0;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+#projects img {
+  width: 450px;
+  height: 230px;
+  border: 1px solid green;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 
 .container {
