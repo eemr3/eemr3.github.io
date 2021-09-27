@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+footer {
+  background-color: rgb(60, 64, 74);
+  bottom: 0;
+  color: white;
+  padding: 20px 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(50, 167, 145);
+  padding: 15px;
+}
+
+.trybewarts-header-logo {
+  display: flex;
+  width: 60px;
+}
+
+.trybewarts-login {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input-email , .input-password {
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  padding: 5px;
+  font-size: 16px;
+}
+
+#btn-login {
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+}
+
+.trybewarts-login button {
+  padding: 10px 50px;
+}
+
+#trybewarts-header-title {
+  font-size: 35px;
+  align-self: center;
+  color: white;
+}
+
+#evaluation-form {
+  display: flex;
+  width: 675px;
+  flex-direction: column;
+}
+
+#trybewarts-forms-logo {
+  height: 500px;
+  margin-left: 150px;
+}
+
+#input-name {
+  display: flex;
+  width: 200px;
+  margin-right: 10px;
+  padding: 11px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(221, 221, 221);
+}
+
+#input-lastname {
+  display: flex;
+  width: 200px;
+  border: none;
+  padding: 11px;
+  border-radius: 8px;
+  background-color: rgb(221, 221, 221);
+}
+
+#input-email {
+  display: flex;
+  margin-right: 10px;
+  width: 200px;
+  height: 20px;
+  padding: 18px 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(221, 221, 221);
+}
+
+#house {
+  display: flex;
+  width: 150px;
+  height: 35px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 8px;
+}
+
+.position {
+  display: flex;
+  margin: 15px 0 5px;
+}
+
+.rate {
+  margin-left: 10px;
+}
+
+.radio-button-content {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  width: 45%;
+}
+
+.check-box-content {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  width: 45%;
+  gap: 10px;
+}
+
+.family {
+  margin: 5px 0 10px;
+}
+
+.subject {
+  margin-left: 10px;
+}
+
+#inputsOptions {
+  display: flex;
+}
+
+#submit-btn {
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(78, 44, 131);
+  color: white;
+  font-size: 16px;
+  margin-top: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#submit-btn:disabled {
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(144, 102, 211);
+  color: white;
+  font-size: 16px;
+  margin-top: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#counter {
+  position: absolute;
+  bottom: 23px;
+  right: 1px;
+}
+
+.section {
+  position: relative;
+  width: 450px;
+}
+
+#textarea {
+  resize: none;
+}
