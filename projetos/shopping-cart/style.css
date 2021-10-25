@@ -37,7 +37,7 @@ main {
 .container {
   display: flex;
   justify-content: space-around;
-  width: 70%;  
+  width: 70%;
 }
 
 .items {
@@ -56,6 +56,10 @@ main {
   height: auto;
   margin: 5px;
   width: 200px;
+}
+
+.item .item__price {
+  font-weight: 700;
 }
 
 .item .item__sku {
@@ -167,8 +171,7 @@ main {
 .loading {
   display: inline-block;
   font-size: 50px;
-  margin: 300px auto; 
-  
+  margin: 300px auto;
 }
 
 .cart__image {

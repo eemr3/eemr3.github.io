@@ -24,11 +24,7 @@ const totalValueProductsCart = () => {
 
   localStorage.setItem(
     'cartItemsTotal',
-
-    resultTotal.toLocaleString('pt-BR', {
-      style: 'currency',
-      currency: 'BRL',
-    })
+    resultTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
   );
   return resultTotal;
 };
@@ -36,7 +32,6 @@ const totalValueProductsCart = () => {
 const printValueProductsCart = () => {
   const elementH3Total = document.querySelector('#cart__total');
   const valueTotalStorage = localStorage.getItem('cartItemsTotal') || [];
-  console.log(valueTotalStorage);
   elementH3Total.innerText = valueTotalStorage;
 };
 
@@ -89,13 +84,23 @@ async function addItemToCart(sku) {
   printValueProductsCart();
 }
 
-function createProductItemElement({ sku, name, image }) {
+function createProductItemElement({ sku, name, image, salePrice }) {
   const section = document.createElement('section');
   section.className = 'item';
 
   section.appendChild(createCustomElement('span', 'item__sku', sku));
   section.appendChild(createCustomElement('span', 'item__title', name));
   section.appendChild(createProductImageElement(image));
+  section.appendChild(
+    createCustomElement(
+      'span',
+      'item__price',
+      salePrice.toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL',
+      })
+    )
+  );
   const btnAddCart = createCustomElement(
     'button',
     'item__add',
@@ -137,9 +142,14 @@ const renderItemsToSreen = async () => {
   createIsLoading();
   const data = await fetchProducts('computador');
   data.results.forEach((element) => {
-    const { id: sku, title: name, thumbnail: image } = element;
+    const {
+      id: sku,
+      title: name,
+      thumbnail: image,
+      price: salePrice,
+    } = element;
     containerProducts.appendChild(
-      createProductItemElement({ sku, name, image })
+      createProductItemElement({ sku, name, image, salePrice })
     );
   });
   removeIsLoading();
