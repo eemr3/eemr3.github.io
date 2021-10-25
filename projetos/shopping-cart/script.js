@@ -16,15 +16,27 @@ function createCustomElement(element, className, innerText) {
 }
 
 const totalValueProductsCart = () => {
-  const storage = JSON.parse(getSavedCartItems()) || []; 
-  const resultTotal = storage.reduce((acc, currentItem) => acc + currentItem.salePrice, 0);
-  localStorage.setItem('cartItemsTotal', JSON.stringify(resultTotal));
+  const storage = JSON.parse(getSavedCartItems()) || [];
+  const resultTotal = storage.reduce(
+    (acc, currentItem) => acc + currentItem.salePrice,
+    0
+  );
+
+  localStorage.setItem(
+    'cartItemsTotal',
+
+    resultTotal.toLocaleString('pt-BR', {
+      style: 'currency',
+      currency: 'BRL',
+    })
+  );
   return resultTotal;
 };
 
 const printValueProductsCart = () => {
-  const elementH3Total = document.querySelector('#cart__total'); 
+  const elementH3Total = document.querySelector('#cart__total');
   const valueTotalStorage = localStorage.getItem('cartItemsTotal') || [];
+  console.log(valueTotalStorage);
   elementH3Total.innerText = valueTotalStorage;
 };
 
@@ -34,7 +46,7 @@ function cartItemClickListener(event, sku) {
   const resultFind = storage.find((returnItem) => returnItem.sku === sku);
   const resultIndex = storage.indexOf(resultFind);
   storage.splice(resultIndex, 1);
-  saveCartItems(JSON.stringify(storage)); 
+  saveCartItems(JSON.stringify(storage));
   totalValueProductsCart();
   printValueProductsCart();
 }
@@ -50,7 +62,7 @@ function createCartItemElement({ sku, name, salePrice, image }) {
   <img src="${image}" class="cart__image" />
   <div class="item-content">
   <span id=name>${name}</span>
-  <span id=price>R$  ${salePrice}</span>
+  <span id=price>R$  ${salePrice.toFixed(2)}</span>
   <span id="codigo">Código: ${sku}</span>
   </div>
   `;
@@ -61,9 +73,15 @@ function createCartItemElement({ sku, name, salePrice, image }) {
 }
 
 async function addItemToCart(sku) {
-  const { title: name, price: salePrice, thumbnail: image } = await fetchItem(sku);
-  containerCartItems.appendChild(createCartItemElement({ sku, name, salePrice, image }));
-  
+  const {
+    title: name,
+    price: salePrice,
+    thumbnail: image,
+  } = await fetchItem(sku);
+  containerCartItems.appendChild(
+    createCartItemElement({ sku, name, salePrice, image })
+  );
+
   const storage = JSON.parse(getSavedCartItems()) || [];
   storage.push({ sku, name, salePrice, image });
   saveCartItems(JSON.stringify(storage));
@@ -78,7 +96,11 @@ function createProductItemElement({ sku, name, image }) {
   section.appendChild(createCustomElement('span', 'item__sku', sku));
   section.appendChild(createCustomElement('span', 'item__title', name));
   section.appendChild(createProductImageElement(image));
-  const btnAddCart = createCustomElement('button', 'item__add', 'Adicionar ao carrinho!');
+  const btnAddCart = createCustomElement(
+    'button',
+    'item__add',
+    'Adicionar ao carrinho!'
+  );
   btnAddCart.addEventListener('click', () => addItemToCart(sku));
   section.appendChild(btnAddCart);
 
@@ -86,8 +108,8 @@ function createProductItemElement({ sku, name, image }) {
 }
 
 const clearCartAllItems = () => {
-  const elementH3Total = document.querySelector('#cart__total'); 
-  localStorage.removeItem('cartItems');  
+  const elementH3Total = document.querySelector('#cart__total');
+  localStorage.removeItem('cartItems');
   localStorage.removeItem('cartItemsTotal');
   containerCartItems.innerHTML = '';
   elementH3Total.innerHTML = 0;
@@ -108,7 +130,7 @@ function createIsLoading() {
 
 function removeIsLoading() {
   const isLoadingRemove = document.querySelector('.loading');
-  isLoadingRemove.remove(); 
+  isLoadingRemove.remove();
 }
 
 const renderItemsToSreen = async () => {
@@ -117,7 +139,7 @@ const renderItemsToSreen = async () => {
   data.results.forEach((element) => {
     const { id: sku, title: name, thumbnail: image } = element;
     containerProducts.appendChild(
-      createProductItemElement({ sku, name, image }),
+      createProductItemElement({ sku, name, image })
     );
   });
   removeIsLoading();
@@ -126,16 +148,17 @@ renderItemsToSreen();
 
 window.onload = () => {
   printValueProductsCart();
-  if (getSavedCartItems() === null) return localStorage.setItem('cartItems', JSON.stringify([]));
-  if (getSavedCartItems() === undefined) return; 
-  
+  if (getSavedCartItems() === null)
+    return localStorage.setItem('cartItems', JSON.stringify([]));
+  if (getSavedCartItems() === undefined) return;
+
   printValueProductsCart();
   const listItemsStorage = getSavedCartItems();
   const resultGetLocalStorage = JSON.parse(listItemsStorage);
   resultGetLocalStorage.forEach((item) => {
     const { sku, name, salePrice, image } = item;
     containerCartItems.appendChild(
-      createCartItemElement({ sku, name, salePrice, image }),
+      createCartItemElement({ sku, name, salePrice, image })
     );
   });
 };
