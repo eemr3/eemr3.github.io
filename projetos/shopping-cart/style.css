@@ -27,7 +27,6 @@ main {
   top: 0;
   left: 0;
   width: 75%;
-  z-index: 10;
 }
 
 .header h1 {
@@ -94,7 +93,7 @@ main {
   padding: 40px 20px;
   position: fixed;
   right: 0;
-  top: 110px;
+  top: 99px;
   width: 25%;
   height: 100vh;
   z-index: 2;
@@ -111,6 +110,14 @@ main {
   text-align: center;
   top: 0;
   width: 25%;
+}
+
+.triangle-cart {
+  border: 25px #008000 solid;
+  position: absolute;
+  left: -20px;
+  transform: rotate(45deg);
+  z-index: 10;
 }
 
 .cart__title {
